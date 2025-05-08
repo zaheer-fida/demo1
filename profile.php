@@ -41,7 +41,7 @@ $view = $_GET['view'] ?? 'myuploads'; // Default view
 <div style="text-align: center; margin: 30px 0;">
     <a href="?view=myuploads"><button style="padding: 10px 20px; margin-right: 10px;">My Profile</button></a>
     <a href="?view=location"><button style="padding: 10px 20px; margin-right: 10px;">Home</button></a>
-    <a href="login.php"><button style="padding: 10px 20px;">Logout</button></a>
+    <a href="index.php"><button style="padding: 10px 20px;">Logout</button></a>
 </div>
 
 <hr>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['images']) || empty($_SESSION['images'])) {
     $hasImages = false;
 
     if ($view === 'location') {
-        echo "<h2 style='color: #6c757d; width: 100%; text-align: center;'>Images from Your Location: " . htmlspecialchars($user['location']) . "</h2>";
+        echo "<h2 style='color: #6c757d; width: 100%; text-align: center;'>Home</h2>";
         foreach ($_SESSION['images'] as $image) {
             if ($image['location'] === $user['location']) {
                 $hasImages = true;
