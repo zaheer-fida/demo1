@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         'email' => $_POST['email'],
         'password' => password_hash($_POST['password'], PASSWORD_DEFAULT)
     ];
-    header("Location: login.php");
+    header("Location: index.php");
     exit();
 }
 ?>
